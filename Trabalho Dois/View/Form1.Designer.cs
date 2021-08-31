@@ -43,6 +43,7 @@ namespace Trabalho_Dois
             this.button10 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -145,7 +146,7 @@ namespace Trabalho_Dois
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(12, 232);
+            this.button10.Location = new System.Drawing.Point(399, 234);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(120, 39);
             this.button10.TabIndex = 11;
@@ -171,11 +172,23 @@ namespace Trabalho_Dois
             this.lblScore.TabIndex = 13;
             this.lblScore.Text = "0";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnBuscar.Location = new System.Drawing.Point(6, 234);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(120, 39);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 280);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button10);
@@ -221,6 +234,7 @@ namespace Trabalho_Dois
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 
