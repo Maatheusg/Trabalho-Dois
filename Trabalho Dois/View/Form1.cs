@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_Dois.Control;
 
 namespace Trabalho_Dois
 {
@@ -31,6 +32,7 @@ namespace Trabalho_Dois
         }
         public static void AddBotao(int quant, Button btn, string letra1, string letra2, string letra3)
         {
+            //A função gera um aleatório de 1 a 2(ou 3). Cada número corresponde a uma letra
             Random ran = new Random();
             int a;
             if (quant == 2)
@@ -63,7 +65,25 @@ namespace Trabalho_Dois
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int certoOuErrado = Controller.Buscar(txtPalavra.Text);
+            if (certoOuErrado == 1)
+            {
+                MessageBox.Show("Deu certo!");
+            }else if(certoOuErrado == -2)
+            {
+                MessageBox.Show("Letras repetidas!");
+            }
+            else
+            {
+                MessageBox.Show("Deu errado");
+            }
+            
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

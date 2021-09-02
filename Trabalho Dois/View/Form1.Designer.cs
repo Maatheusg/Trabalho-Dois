@@ -40,7 +40,7 @@ namespace Trabalho_Dois
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPalavra = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@ namespace Trabalho_Dois
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 53);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "ad";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -138,13 +138,15 @@ namespace Trabalho_Dois
             // 
             // txtPalavra
             // 
+            this.txtPalavra.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtPalavra.Location = new System.Drawing.Point(132, 187);
             this.txtPalavra.Name = "txtPalavra";
             this.txtPalavra.Size = new System.Drawing.Size(246, 39);
-            this.txtPalavra.TabIndex = 10;
+            this.txtPalavra.TabIndex = 0;
             // 
-            // button10
+            // btnFechar
             // 
+<<<<<<< Updated upstream
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(399, 234);
             this.button10.Name = "button10";
@@ -153,6 +155,16 @@ namespace Trabalho_Dois
             this.button10.Text = "Encerrar";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+=======
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.Location = new System.Drawing.Point(399, 229);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(120, 39);
+            this.btnFechar.TabIndex = 11;
+            this.btnFechar.Text = "Encerrar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+>>>>>>> Stashed changes
             // 
             // label2
             // 
@@ -174,8 +186,13 @@ namespace Trabalho_Dois
             // 
             // btnBuscar
             // 
+<<<<<<< Updated upstream
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.btnBuscar.Location = new System.Drawing.Point(6, 234);
+=======
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(6, 229);
+>>>>>>> Stashed changes
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(120, 39);
             this.btnBuscar.TabIndex = 14;
@@ -191,7 +208,7 @@ namespace Trabalho_Dois
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.txtPalavra);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
@@ -231,7 +248,7 @@ namespace Trabalho_Dois
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPalavra;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Button btnBuscar;
