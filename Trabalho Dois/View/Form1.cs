@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_Dois.Control;
 
 namespace Trabalho_Dois
 {
@@ -66,6 +67,23 @@ namespace Trabalho_Dois
         private void button10_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text));
+            if (certoOuErrado == 1)
+            {
+                MessageBox.Show("Palavra válida!");
+            }
+            else if (certoOuErrado == -2)
+            {
+                MessageBox.Show("Letras repetidas!");
+            }
+            else
+            {
+                MessageBox.Show("Palavra inválida!");
+            }
         }
     }
 }
