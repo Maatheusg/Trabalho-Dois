@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Trabalho_Dois.Control
 {
@@ -84,7 +85,7 @@ namespace Trabalho_Dois.Control
                         return 1;
                     }
                 }
-                return -1;
+                return 1;
             }
         }
         //Funções que verificam se a próxima letra é válida.
@@ -92,11 +93,11 @@ namespace Trabalho_Dois.Control
         {
             if (proxLetra == 'e' || proxLetra == 'f' || proxLetra == 'g' || proxLetra == 'i' || proxLetra == 'u' || proxLetra == 'h' || proxLetra == 'j' || proxLetra == 'v')
             {
-                return true;
+                return true; //A letra é válida
             }
             else
             {
-                return false;
+                return false; //A letra não é válida
             }
         }
         private static bool CasoEf(string palavra, char proxLetra)
@@ -182,13 +183,28 @@ namespace Trabalho_Dois.Control
             {
                 for (int j = palavra.Length - 1; j > i; j--)
                 {
-                        if (palavra[i] == palavra[j])
-                        {
-                            return false;
-                        }
+                    if (palavra[i] == palavra[j])
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
+        }
+        public static int RepetePalavra(ComboBox cb, string novaPalavra)
+        {
+            for (int i = 0; i < cb.Items.Count; i++)
+            {
+                string a1 = cb.Items[i].ToString();
+                for (int j = cb.Items.Count; j > i; j--)
+                {
+                    if (a1 == novaPalavra)
+                    {
+                        return -3;
+                    }
+                }
+            }
+            return 1;
         }
     }
 }

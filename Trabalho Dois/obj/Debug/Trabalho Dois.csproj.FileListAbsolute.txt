@@ -8,3 +8,13 @@ C:\Users\Azevedo\Documents\GitHub\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho
 C:\Users\Azevedo\Documents\GitHub\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.csproj.CoreCompileInputs.cache
 C:\Users\Azevedo\Documents\GitHub\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.exe
 C:\Users\Azevedo\Documents\GitHub\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.pdb
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\bin\Debug\Trabalho Dois.exe.config
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\bin\Debug\Trabalho Dois.exe
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\bin\Debug\Trabalho Dois.pdb
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.csprojAssemblyReference.cache
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho_Dois.Properties.Resources.resources
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho_Dois.Form1.resources
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.csproj.GenerateResource.cache
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.csproj.CoreCompileInputs.cache
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.exe
+C:\Users\matheus.santos17\Documents\GitHub\d\Trabalho-Dois\Trabalho Dois\obj\Debug\Trabalho Dois.pdb

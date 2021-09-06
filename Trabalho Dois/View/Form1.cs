@@ -23,12 +23,12 @@ namespace Trabalho_Dois
             AddBotao(2, button1, "a", "d", "");
             AddBotao(2, button2, "e", "f", "");
             AddBotao(2, button3, "c", "b", "");
-            AddBotao(2, button4, "g", "i", "u");
-            AddBotao(2, button5, "h", "j", "v");
+            AddBotao(3, button4, "g", "i", "u");
+            AddBotao(3, button5, "h", "j", "v");
             AddBotao(2, button6, "k", "l", "");
-            AddBotao(2, button7, "m", "o", "q");
-            AddBotao(2, button8, "n", "t", "p");
-            AddBotao(2, button9, "r", "s", "z");
+            AddBotao(3, button7, "m", "o", "q");
+            AddBotao(3, button8, "n", "t", "p");
+            AddBotao(3, button9, "r", "s", "z");
         }
         public static void AddBotao(int quant, Button btn, string letra1, string letra2, string letra3)
         {
@@ -37,7 +37,14 @@ namespace Trabalho_Dois
             if (quant == 2)
             {
                 a = ran.Next(1, 3);
-                if (a == 1)
+            }
+            else
+            {
+                a = ran.Next(1, 4);
+            }
+            if (quant == 2)
+            {
+                if (a != 1)
                 {
                     btn.Text = letra1;
                 }
@@ -46,14 +53,13 @@ namespace Trabalho_Dois
                     btn.Text = letra2;
                 }
             }
-            else if(quant == 3)
+            else if (quant == 3)
             {
-                a = ran.Next(1, 4);
                 if (a == 1)
                 {
                     btn.Text = letra1;
                 }
-                else if(a == 2)
+                else if (a == 2)
                 {
                     btn.Text = letra2;
                 }
@@ -71,19 +77,33 @@ namespace Trabalho_Dois
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text));
-            if (certoOuErrado == 1)
+            int bla = Controller.RepetePalavra(cbPalavras, txtPalavra.Text);
+            if (bla == -3)
             {
-                MessageBox.Show("Palavra válida!");
-            }
-            else if (certoOuErrado == -2)
-            {
-                MessageBox.Show("Letras repetidas!");
+                MessageBox.Show("Palavra já inserida");
             }
             else
             {
-                MessageBox.Show("Palavra inválida!");
+                AddCb(cbPalavras, txtPalavra.Text);
+                int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text));
+                if (certoOuErrado == 1)
+                {
+                    MessageBox.Show("Palavra válida!");
+                }
+                else if (certoOuErrado == -2)
+                {
+                    MessageBox.Show("Letras repetidas!");
+                }
+                else
+                {
+                    MessageBox.Show("Palavra inválida!");
+                }
             }
         }
+        private static void AddCb(ComboBox cb, string palavra)
+        {
+            cb.Items.Add(palavra);
+        }
+
     }
 }
