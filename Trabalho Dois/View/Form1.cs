@@ -85,7 +85,7 @@ namespace Trabalho_Dois
             else
             {
                 AddCb(cbPalavras, txtPalavra.Text);
-                int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text));
+                int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button5.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text), lblScore.Text);
                 if (certoOuErrado == 1)
                 {
                     MessageBox.Show("Palavra válida!");
@@ -99,6 +99,7 @@ namespace Trabalho_Dois
                     MessageBox.Show("Palavra inválida!");
                 }
             }
+            txtPalavra.Clear();
         }
         private static void AddCb(ComboBox cb, string palavra)
         {
