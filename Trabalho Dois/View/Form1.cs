@@ -77,6 +77,7 @@ namespace Trabalho_Dois
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            string score = "0";
             int bla = Controller.RepetePalavra(cbPalavras, txtPalavra.Text);
             if (bla == -3)
             {
@@ -85,7 +86,7 @@ namespace Trabalho_Dois
             else
             {
                 AddCb(cbPalavras, txtPalavra.Text);
-                int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button5.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text), lblScore.Text);
+                int certoOuErrado = Controller.Buscar(txtPalavra.Text, Convert.ToChar(button1.Text), Convert.ToChar(button2.Text), Convert.ToChar(button3.Text), Convert.ToChar(button4.Text), Convert.ToChar(button5.Text), Convert.ToChar(button6.Text), Convert.ToChar(button7.Text), Convert.ToChar(button8.Text), Convert.ToChar(button9.Text), out score, lblScore.Text);
                 if (certoOuErrado == 1)
                 {
                     MessageBox.Show("Palavra válida!");
@@ -94,11 +95,16 @@ namespace Trabalho_Dois
                 {
                     MessageBox.Show("Letras repetidas!");
                 }
+                else if (certoOuErrado == -4)
+                {
+                    MessageBox.Show("Caracteres inválidos!");
+                }
                 else
                 {
                     MessageBox.Show("Palavra inválida!");
                 }
             }
+            lblScore.Text = score;
             txtPalavra.Clear();
         }
         private static void AddCb(ComboBox cb, string palavra)
@@ -106,5 +112,19 @@ namespace Trabalho_Dois
             cb.Items.Add(palavra);
         }
 
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            AddBotao(2, button1, "a", "d", "");
+            AddBotao(2, button2, "e", "f", "");
+            AddBotao(2, button3, "c", "b", "");
+            AddBotao(3, button4, "g", "i", "u");
+            AddBotao(3, button5, "h", "j", "v");
+            AddBotao(2, button6, "k", "l", "");
+            AddBotao(3, button7, "m", "o", "q");
+            AddBotao(3, button8, "n", "t", "p");
+            AddBotao(3, button9, "r", "s", "z");
+            cbPalavras.Items.Clear();
+            lblScore.Text = "0";
+        }
     }
 }

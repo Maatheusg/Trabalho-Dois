@@ -45,6 +45,7 @@ namespace Trabalho_Dois
             this.lblScore = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.cbPalavras = new System.Windows.Forms.ComboBox();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -194,11 +195,23 @@ namespace Trabalho_Dois
             this.cbPalavras.Size = new System.Drawing.Size(272, 40);
             this.cbPalavras.TabIndex = 15;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Location = new System.Drawing.Point(536, 158);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(120, 64);
+            this.btnNovo.TabIndex = 16;
+            this.btnNovo.Text = "Novo Jogo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 280);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.cbPalavras);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblScore);
@@ -247,6 +260,7 @@ namespace Trabalho_Dois
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ComboBox cbPalavras;
+        private System.Windows.Forms.Button btnNovo;
     }
 }
 
